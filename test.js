@@ -81,7 +81,7 @@
             'message',
             (event) => {
                 const data = event.data;
-                if (data && typeof data === 'string && data.startsWith(this.FOLIO_CLOSE_PREFIX)) {
+                if (data && typeof data === 'string' && data.startsWith(this.FOLIO_CLOSE_PREFIX)) {
                     const parts = event.data.split(this.FOLIO_CLOSE_PREFIX);
                     this.close(parts[1]);
                 }
